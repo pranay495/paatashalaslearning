@@ -76,25 +76,25 @@ include 'header.php';
                     <div class="row">
                         <div class="col-lg-3 col-sm-3 col-6">
                             <div class="single-counter">
-                                <h2><span class="counter">874</span></h2>
+                                <h2><span class="counter">100</span>+</h2>
                                 <p>courses</p>
                             </div><!--/.single-counter-->
                         </div><!--/.col-lg-3-->
                         <div class="col-lg-3 col-sm-3 col-6">
                             <div class="single-counter">
-                                <h2><span class="counter">600</span></h2>
+                                <h2><span class="counter">600</span>+</h2>
                                 <p>students</p>
                             </div><!--/.single-counter-->
                         </div><!--/.col-lg-3-->
                         <div class="col-lg-3 col-sm-3 col-6">
                             <div class="single-counter">
-                                <h2><span class="counter">472</span></h2>
+                                <h2><span class="counter">40</span>+</h2>
                                 <p>E-Book</p>
                             </div><!--/.single-counter-->
                         </div><!--/.col-lg-3-->
                         <div class="col-lg-3 col-sm-3 col-6">
                             <div class="single-counter">
-                                <h2><span class="counter">243</span></h2>
+                                <h2><span class="counter">50</span>+</h2>
                                 <p>Teachers</p>
                             </div><!--/.single-counter-->
                         </div><!--/.col-lg-3-->

@@ -57,12 +57,28 @@
                                     <li><a href="index.php">Admin Home</a>
 
                                     </li>
-                                    <li class="dropdown-trigger"><a href="#"> Update Courses</a>
+                                    <li class="dropdown-trigger"><a href="#">Courses</a>
+                                      <ul class="dropdown-content">
+                                          <li><a href='#'>Courses List</a></li>
+                                          <li><a href='#'>Update Course</a></li>
 
+                                      </ul>
+                                    </li>
+                                    <li class="dropdown-trigger"><a href="#">Instructors</a>
+                                      <ul class="dropdown-content">
+                                          <li><a href='#'>Instructors List</a></li>
+                                          <li><a href='#'>Update Instructors</a></li>
+
+                                      </ul>
                                     </li>
 
-                                    <li><a href="#">Courses View</a></li>
+                                    <li class="dropdown-trigger"><a href="#">students</a>
+                                      <ul class="dropdown-content">
+                                          <li><a href='#'>Registered Students List</a></li>
+                                          <li><a href='#'>Update Course</a></li>
 
+                                      </ul>
+                                    </li>
 
                                 </ul>
                             </nav><!--/.menu-->
