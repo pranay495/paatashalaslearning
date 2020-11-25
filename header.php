@@ -42,7 +42,7 @@
     ====================================-->
     <header id="site-header" class="header-area">
         <div class="header-inner">
-            <div class="container">
+            <!-- <div class="container-fluid"> -->
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="logo-menu-wrap">
@@ -82,9 +82,11 @@
                                               </ul>
                                           </li>
 
+
+
                                         </ul>
                                     </li>
-
+                                    <li><a href="contact.php">Contact Us</a></li>
                                     <li><a href="about.php">about us</a></li>
 
 
@@ -92,15 +94,15 @@
                             </nav><!--/.menu-->
                             <div class="register-contact-nav pull-right">
 
-                                    <a href="register.php" title="">Register</a>
+                                    <a class="btn btn-default" href="register.php" title="">Register</a>
                                     <!-- <a href="login.html" title="">Login</a> -->
 
-                                <a class="btn btn-default" href="contact.php">contact</a>
+                                <!-- <a class="btn btn-default" href="contact.php">contact</a> -->
                             </div><!--/.register-contact-nav-->
                         </div><!--/.logo-menu-wrap-->
                     </div><!--/.col-lg-12-->
                 </div><!--/.row-->
-            </div><!--/.container-fluid-->
+            <!-- </div> -->
         </div><!--/.headier-inner-->
 
         <div id="sticky-header"></div><!--/#sticky-header-->

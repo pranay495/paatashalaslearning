@@ -60,7 +60,7 @@
                                     <li class="dropdown-trigger"><a href="#">Courses</a>
                                       <ul class="dropdown-content">
                                           <li><a href='#'>Courses List</a></li>
-                                          <li><a href='#'>Update Course</a></li>
+                                          <li><a href='upatecourse.php'>Update Course</a></li>
 
                                       </ul>
                                     </li>
@@ -74,7 +74,7 @@
 
                                     <li class="dropdown-trigger"><a href="#">students</a>
                                       <ul class="dropdown-content">
-                                          <li><a href='#'>Registered Students List</a></li>
+                                          <li><a href='#'>Registered   Students List</a></li>
                                           <li><a href='#'>Update Course</a></li>
 
                                       </ul>
