@@ -42,52 +42,53 @@
     ====================================-->
     <header id="site-header" class="header-area">
         <div class="header-inner">
-            <!-- <div class="container-fluid"> -->
+            <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="logo-menu-wrap">
                           <!-- hidden-xs hidden-sm -->
                             <div class="logo">
-                                <a href="index.html">
+                                <a href="index.php">
                                     <img src="images/logo.png" alt="logo">
                                 </a>
                             </div><!--/.logo-->
-                            <nav class="menu">
+                            <nav class="menu" style="margin:0px;">
                                 <ul id="nav">
                                     <li><a href="index.php">home</a>
 
                                     </li>
                                     <li class="dropdown-trigger"><a href="courses.php">Courses</a>
                                         <ul class="dropdown-content">
-                                          <li class="dropdown-trigger"><a href="#">3rd to 7th Class</a>
-                                              <ul class="dropdown-content">
-                                                  <li><a href="courses.php?class=class3&subject=''&cat=''">Class 3</a></li>
-                                                  <li><a href="courses.php?class=class4&subject=''&cat=''">Class 4</a></li>
-                                                  <li><a href="courses.php?class=class5&subject=''&cat=''">Class 5</a></li>
-                                                  <li><a href="courses.php?class=class6&subject=''&cat=''">Class 6</a></li>
-                                                  <li><a href="courses.php?class=class7&subject=''&cat=''">Class 7</a></li>
-                                              </ul>
+                                          <li class=""><a href="courses.php?class=''&subject=''&cat='1'">3rd to 7th Class</a>
+                                              <!-- <ul class="dropdown-content">
+                                                  <li><a href="courses.php?class=1&subject=''&cat=''">Class 3</a></li>
+                                                  <li><a href="courses.php?class=2&subject=''&cat=''">Class 4</a></li>
+                                                  <li><a href="courses.php?class=3&subject=''&cat=''">Class 5</a></li>
+                                                  <li><a href="courses.php?class=4&subject=''&cat=''">Class 6</a></li>
+                                                  <li><a href="courses.php?class=5&subject=''&cat=''">Class 7</a></li>
+                                              </ul> -->
                                           </li>
-                                          <li class="dropdown-trigger"><a href="#">Secondary Classes</a>
-                                              <ul class="dropdown-content">
-                                                  <li><a href="#">Class 8</a></li>
-                                                  <li><a href="#">Class 9</a></li>
-                                                  <li><a href="#">Class 10</a></li>
-                                              </ul>
+                                          <li class=""><a href="courses.php?class=''&subject=''&cat='2'">Secondary Classes</a>
+                                              <!-- <ul class="dropdown-content">
+                                                  <li><a href="courses.php?class=6&subject=''&cat=''">Class 8</a></li>
+                                                  <li><a href="courses.php?class=7&subject=''&cat=''">Class 9</a></li>
+                                                  <li><a href="courses.php?class=8&subject=''&cat=''">Class 10</a></li>
+                                              </ul> -->
                                           </li>
-                                          <li class="dropdown-trigger"><a href="#">Higher Secondary Classes</a>
-                                              <ul class="dropdown-content">
-                                                  <li><a href="#">Inter I / Class 11</a></li>
-                                                  <li><a href="#">Inter II / Class 12</a></li>
-                                              </ul>
+                                          <li class=""><a href="courses.php?class=''&subject=''&cat='3'">Higher Secondary Classes</a>
+                                              <!-- <ul class="dropdown-content">
+                                                  <li><a href="courses.php?class=9&subject=''&cat=''">Inter I / Class 11</a></li>
+                                                  <li><a href="courses.php?class=10&subject=''&cat=''">Inter II / Class 12</a></li>
+                                              </ul> -->
                                           </li>
 
 
 
                                         </ul>
                                     </li>
-                                    <li><a href="contact.php">Contact Us</a></li>
                                     <li><a href="about.php">about us</a></li>
+
+                                    <li><a href="contact.php">Contact Us</a></li>
 
 
                                 </ul>
@@ -102,7 +103,7 @@
                         </div><!--/.logo-menu-wrap-->
                     </div><!--/.col-lg-12-->
                 </div><!--/.row-->
-            <!-- </div> -->
+            </div>
         </div><!--/.headier-inner-->
 
         <div id="sticky-header"></div><!--/#sticky-header-->

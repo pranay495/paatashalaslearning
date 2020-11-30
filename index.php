@@ -117,224 +117,52 @@ include 'header.php';
             </div><!--/.section-heading-area-->
         </div><!--/.col-lg-8-->
       </div><!--/.row-->
-      <div class="row">
-                <div class="col-lg-12">
-          <!-- <ul class="list-unstyled popular-filter-nav text-center">
-            <li><a class="filter" href="#" data-filter="*">All</a></li>
-            <li><a class="filter" href="#" data-filter=".design">Design</a></li>
-            <li><a href="#" class="filter" data-filter=".development">Development</a></li>
-            <li><a href="#" class="filter" data-filter=".business">Business</a></li>
-            <li><a href="#" class="filter" data-filter=".photography">Photography</a></li>
-          </ul><!--/.popular-filter-nav--> -->
-        </div><!--/.col-lg-12-->
-            </div><!--/.row-->
+
       <div class="row courses-item-content">
-                <div class="col-lg-4 col-sm-6 design photography">
-                    <!--Single Course Item Start-->
-                    <div class="single-course-item border-radius">
-                        <div class="course-thumb-area">
-                            <img class="img-fluid" src="images/courses/course1.jpg" alt="img">
-                            <div class="course-meta">
-                                <a href="#"><i class="fa fa-heart-o"></i></a>
-                                <a href="#"><i class="fa fa-share-alt"></i></a>
-                            </div>
-                            <span class="course-duration">2.2 hours</span>
-                        </div><!--/.course-thumb-area-->
-                        <div class="course-content">
-                            <h2><a href="single-course.html">Object-Oriented Python</a></h2>
-                            <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
-                            <div class="course-reviews">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                <span class="total-reviews">(105 reviews)</span>
-                            </div><!--/.course-reviews-->
-                            <div class="trainer-profile clearfix">
-                                <img class="rounded-circle" src="images/author/author-1.jpg" alt="img">
-                                <div class="trainer-info">
-                                    <h3>Kelium Smith</h3>
-                                    <p>24 april 2017</p>
-                                </div>
-                                <div class="course-cat text-capitalize text-right"><a href="#">Development</a></div>
-                            </div><!--/.trainer-profile-->
-                        </div><!--/.course-content-->
-                    </div><!--/.single-course-item-end-->
-                </div><!--/.col-lg-4-->
+        <?php
+          $i=0;
+          $q2 = "select  c.courseid, c.coursecat, c.cat2, c.subject, c.coursename, c.tags, c.price, c.description1, s.subject, cl.coursecat, ct.coursecat  from courses c join coursesub s on s.subjectid = c.subject join coursecat ct on ct.catid = c.cat2 join courseclass cl on  cl.classid = c.coursecat order by c.courseid asc";
+          $r2 = mysql_query($q2);
+          // echo $r2;
+          while (list($courseid, $coursecatid, $cat2id, $subjectid, $coursename, $tags, $price, $description1, $subject, $courseclass, $cat  ) = mysql_fetch_array($r2)) {
+            if($i < 6)
+            {
+        ?>
 
-                <div class="col-lg-4 col-sm-6 business">
-                    <!--Single Course Item Start-->
-                    <div class="single-course-item border-radius">
-                        <div class="course-thumb-area">
-                            <img class="img-fluid" src="images/courses/course2.jpg" alt="img">
-                            <div class="course-meta">
-                                <a href="#"><i class="fa fa-heart-o"></i></a>
-                                <a href="#"><i class="fa fa-share-alt"></i></a>
-                            </div>
-                            <span class="course-duration">2.2 hours</span>
-                        </div><!--/.course-thumb-area-->
-                        <div class="course-content">
-                            <h2><a href="single-course.html">Isometric Mockup Design</a></h2>
-                            <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
-                            <div class="course-reviews">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                <span class="total-reviews">(105 reviews)</span>
-                            </div><!--/.course-reviews-->
-                             <div class="trainer-profile clearfix">
-                                <img class="rounded-circle" src="images/author/author-1.jpg" alt="img">
-                                <div class="trainer-info">
-                                    <h3>Kelium Smith</h3>
-                                    <p>24 april 2017</p>
-                                </div>
-                                <div class="course-cat text-capitalize text-right"><a href="#">Design</a></div>
-                            </div><!--/.trainer-profile-->
-                        </div><!--/.course-content-->
-                    </div><!--/.single-course-item-end-->
-                </div><!--/.col-lg-4-->
-                <div class="col-lg-4 col-sm-6 design photography">
-                    <!--Single Course Item Start-->
-                    <div class="single-course-item border-radius">
-                        <div class="course-thumb-area">
-                            <img class="img-fluid" src="images/courses/course3.jpg" alt="img">
-                            <div class="course-meta">
-                                <a href="#"><i class="fa fa-heart-o"></i></a>
-                                <a href="#"><i class="fa fa-share-alt"></i></a>
-                            </div>
-                            <span class="course-duration">2.2 hours</span>
-                        </div><!--/.course-thumb-area-->
-                        <div class="course-content">
-                            <h2><a href="single-course.html">HTML5 Essential Training</a></h2>
-                            <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
-                            <div class="course-reviews">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                <span class="total-reviews">(105 reviews)</span>
-                            </div><!--/.course-reviews-->
-                             <div class="trainer-profile clearfix">
-                                <img class="rounded-circle" src="images/author/author-1.jpg" alt="img">
-                                <div class="trainer-info">
-                                    <h3>Kelium Smith</h3>
-                                    <p>24 april 2017</p>
-                                </div>
-                                <div class="course-cat text-capitalize text-right"><a href="#">Development</a></div>
-                            </div><!--/.trainer-profile-->
-                        </div><!--/.course-content-->
-                    </div><!--/.single-course-item-end-->
-                </div><!--/.col-lg-4-->
-                <div class="col-lg-4 col-sm-6 development business">
-                    <!--Single Course Item Start-->
-                    <div class="single-course-item border-radius">
-                        <div class="course-thumb-area">
-                            <img class="img-fluid" src="images/courses/course4.jpg" alt="img">
-                            <div class="course-meta">
-                                <a href="#"><i class="fa fa-heart-o"></i></a>
-                                <a href="#"><i class="fa fa-share-alt"></i></a>
-                            </div>
-                            <span class="course-duration">2.2 hours</span>
-                        </div><!--/.course-thumb-area-->
-                        <div class="course-content">
-                            <h2><a href="single-course.html">Photo Manipulation</a></h2>
-                            <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
-                            <div class="course-reviews">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                <span class="total-reviews">(105 reviews)</span>
-                            </div><!--/.course-reviews-->
-                            <div class="trainer-profile clearfix">
-                                <img class="rounded-circle" src="images/author/author-1.jpg" alt="img">
-                                <div class="trainer-info">
-                                    <h3>Kelium Smith</h3>
-                                    <p>24 april 2017</p>
-                                </div>
-                                <div class="course-cat text-capitalize text-right"><a href="#">Design</a></div>
-                            </div><!--/.trainer-profile-->
-                        </div><!--/.course-content-->
-                    </div><!--/.single-course-item-end-->
-                </div><!--/.col-lg-4-->
+        <div class="col-lg-4 col-sm-6 <?php echo $subject; ?>">
+            <!--Single Course Item Start-->
+            <div class="single-course-item border-radius">
+                <div class="course-thumb-area">
+                    <img class="img-fluid" src="images/courses/<?php echo $subject; ?>.jpg" alt="img">
 
-                <div class="col-lg-4 col-sm-6 design">
-                    <!--Single Course Item Start-->
-                    <div class="single-course-item border-radius">
-                        <div class="course-thumb-area">
-                            <img class="img-fluid" src="images/courses/course5.jpg" alt="img">
-                            <div class="course-meta">
-                                <a href="#"><i class="fa fa-heart-o"></i></a>
-                                <a href="#"><i class="fa fa-share-alt"></i></a>
-                            </div>
-                            <span class="course-duration">2.2 hours</span>
-                        </div><!--/.course-thumb-area-->
-                        <div class="course-content">
-                            <h2><a href="single-course.html">PHP Essential Training</a></h2>
-                            <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
-                            <div class="course-reviews">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                <span class="total-reviews">(105 reviews)</span>
-                            </div><!--/.course-reviews-->
-                            <div class="trainer-profile clearfix">
-                                <img class="rounded-circle" src="images/author/author-1.jpg" alt="img">
-                                <div class="trainer-info">
-                                    <h3>Kelium Smith</h3>
-                                    <p>24 april 2017</p>
-                                </div>
-                                <div class="course-cat text-capitalize text-right"><a href="#">Development</a></div>
-                            </div><!--/.trainer-profile-->
-                        </div><!--/.course-content-->
-                    </div><!--/.single-course-item-end-->
-                </div><!--/.col-lg-4-->
-                <div class="col-lg-4 col-sm-6 development photography">
-                    <!--Single Course Item Start-->
-                    <div class="single-course-item border-radius">
-                        <div class="course-thumb-area">
-                            <img class="img-fluid" src="images/courses/course6.jpg" alt="img">
-                            <div class="course-meta">
-                                <a href="#"><i class="fa fa-heart-o"></i></a>
-                                <a href="#"><i class="fa fa-share-alt"></i></a>
-                            </div>
-                            <span class="course-duration">2.2 hours</span>
-                        </div><!--/.course-thumb-area-->
-                        <div class="course-content">
-                            <h2><a href="single-course.html">Illustration For Beginner</a></h2>
-                            <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
-                            <div class="course-reviews">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                                <span class="total-reviews">(105 reviews)</span>
-                            </div><!--/.course-reviews-->
-                            <div class="trainer-profile clearfix">
-                                <img class="rounded-circle" src="images/author/author-1.jpg" alt="img">
-                                <div class="trainer-info">
-                                    <h3>Kelium Smith</h3>
-                                    <p>24 april 2017</p>
-                                </div>
-                                <div class="course-cat text-capitalize text-right"><a href="#">Design</a></div>
-                            </div><!--/.trainer-profile-->
-                        </div><!--/.course-content-->
-                    </div><!--/.single-course-item-end-->
-                </div><!--/.col-lg-4-->
-        </div><!--/.row-->
+                </div><!--/.course-thumb-area-->
+                <div class="course-content">
+                    <h2><a href="register.php"><?php echo $coursename; ?></a></h2>
+                    <ul>
+                      <?php echo $description1; ?>
+                    </ul>
+                    <div class="trainer-profile clearfix">
+                        <div class="trainer-info">
+                            <h3><?php echo $price; ?></h3>
+                        </div>
+                        <div class="course-cat text-capitalize text-right"><a href="#"><?php echo $tags; ?></a></div>
+                    </div><!--/.trainer-profile-->
+                </div><!--/.course-content-->
+            </div><!--/.single-course-item-end-->
+        </div><!--/.col-lg-4-->
+
+        <?php
+        $i = $i+1;
+      }
+
+    }
+         ?>
+      </div><!--/.row-->
         <div class="row">
             <div class="col-lg-12">
                     <div class="group-btn text-center">
-                        <a href="#" class="btn btn-default btn-primary">Start Your Free Trail</a>
-                        <a href="#" class="btn btn-default">Explore More Courses</a>
+                        <a href="register.php" class="btn btn-default btn-primary">Register</a>
+                        <a href="courses.php" class="btn btn-default">Explore More Courses</a>
                     </div><!--/.form-group-btn-->
                 </div><!--/.col-lg-12-->
         </div><!--/.row-->
@@ -352,7 +180,7 @@ include 'header.php';
                     <div id="customer-reviews" class="owl-carousel" data-slider-id="1">
                         <!--Single Customer Review-->
                         <div class="single-customer-review text-center">                             <span class="fa fa-quote-left"></span>
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus  sit voluptatem accusantium doloremque laudantium totam rem aperiam.</p>
+                          <p>With Paatashlas'  best Mentors I am able to understand the Class 10 Science Concepts and helped me in gaining better marks</p>
                             <div class="review-rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -360,12 +188,12 @@ include 'header.php';
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                             </div><!--/.review-rating-->
-                            <h4><span>Jhon Doe</span> - CEO at Symphony</h4>
+                            <h4><span>Abhay</span> - Class 8</h4>
                         </div><!--/.single-customer-review-->
 
                         <!--Single Customer Review-->
                         <div class="single-customer-review text-center">                             <span class="fa fa-quote-left"></span>
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus  sit voluptatem accusantium doloremque laudantium totam rem aperiam.</p>
+                          <p>Maths Learning has  been easy with Paatashalas' Qualified Mentors </p>
                             <div class="review-rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -373,12 +201,12 @@ include 'header.php';
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                             </div><!--/.review-rating-->
-                            <h4><span>Jhon Doe</span> - CEO at Symphony</h4>
+                            <h4><span>Sai Krishna</span> - Class 10</h4>
                         </div><!--/.single-customer-review-->
 
                         <!--Single Customer Review-->
                         <div class="single-customer-review text-center">                             <span class="fa fa-quote-left"></span>
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus  sit voluptatem accusantium doloremque laudantium totam rem aperiam.</p>
+                          <p>Thanks to Paatashlas , My Daughter now has better understanding of her subjects and gets good  marks now</p>
                             <div class="review-rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -386,7 +214,7 @@ include 'header.php';
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
                             </div><!--/.review-rating-->
-                            <h4><span>Jhon Doe</span> - CEO at Symphony</h4>
+                            <h4><span>Radha</span> - Intermediate 2nd Year student's Mother</h4>
                         </div><!--/.single-customer-review-->
                     </div><!--/#customer-reviews-->
                     <!-- <div class="owl-thumbs text-center" data-slider-id="1">
