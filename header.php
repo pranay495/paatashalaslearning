@@ -110,6 +110,6 @@
 
         <!--Mobile Menu-->
         <div class="mobile-menu">
-            <a class="mobile-logo" href="index.php"><img src="images/logo.png" alt="logo"></a>
+            <a class="mobile-logo" href="index.php"><img src="images/mobile_logo.png" alt="logo"></a>
         </div>
     </header><!--/.header-area-->

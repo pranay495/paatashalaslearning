@@ -112,25 +112,40 @@ include 'header.php';
     <div class="container">
         <div class="row justify-content-md-center">
         <div class="col-lg-8">
-            <div class="section-heading-area text-center">
-              <h2 class="section-heading text-capitalize">Popular Courses</h2>
+            <div class="section-heading-area text-center" style="padding:0px;">
+              <h2 class="section-heading text-capitalize" >Popular Courses</h2>
+
+              <div class="row">
+                  <div class="col-lg-12">
+                      <ul class="list-unstyled popular-filter-nav text-center">
+                        <?php
+                        $q2 = "select distinct ct.coursecat, ct.catid  from courses c join coursesub s on s.subjectid = c.subject join coursecat ct on ct.catid = c.cat2 join courseclass cl on  cl.classid = c.coursecat order by c.courseid asc";
+                        $r2 = mysql_query($q2);
+                        while (list($coursecat, $coursecatid ) = mysql_fetch_array($r2)) {
+                        ?>
+                          <li><a class="filter" href="#" onclick="coursefilter('<?php echo $coursecatid; ?>')" value = "<?php echo $coursecatid; ?>"  data-filter=".<?php echo $coursecatid; ?>"><?php echo $coursecat; ?></a></li>
+                          <?php
+                        }
+                           ?>
+                      </ul><!--/.popular-filter-nav-->
+                  </div><!--/.col-lg-12-->
+              </div><!--/.row-->
+
             </div><!--/.section-heading-area-->
         </div><!--/.col-lg-8-->
       </div><!--/.row-->
 
-      <div class="row courses-item-content">
+      <div id="coursesfilter" class="row courses-item-content" style="position:initial;">
         <?php
-          $i=0;
-          $q2 = "select  c.courseid, c.coursecat, c.cat2, c.subject, c.coursename, c.tags, c.price, c.description1, s.subject, cl.coursecat, ct.coursecat  from courses c join coursesub s on s.subjectid = c.subject join coursecat ct on ct.catid = c.cat2 join courseclass cl on  cl.classid = c.coursecat order by c.courseid asc";
-          $r2 = mysql_query($q2);
-          // echo $r2;
-          while (list($courseid, $coursecatid, $cat2id, $subjectid, $coursename, $tags, $price, $description1, $subject, $courseclass, $cat  ) = mysql_fetch_array($r2)) {
-            if($i < 6)
-            {
-        ?>
-
-        <div class="col-lg-4 col-sm-6 <?php echo $subject; ?>">
-            <!--Single Course Item Start-->
+        $q4 = "select  c.courseid, c.coursecat, c.cat2, c.subject, c.coursename, c.tags, c.price, c.description1, s.subject, cl.coursecat, ct.coursecat, ct.catid  from courses c join coursesub s on s.subjectid = c.subject join coursecat ct on ct.catid = c.cat2 join courseclass cl on  cl.classid = c.coursecat  order by rand() limit 6";
+        $r4 = mysql_query($q4);
+        // echo $r4;
+        while (list($courseid, $coursecatid, $cat2id, $subjectid, $coursename, $tags, $price, $description1, $subject, $courseclass, $cat, $catid  ) = mysql_fetch_array($r4)) {
+          // if($j < 6)
+          // {
+      ?>
+      <div id=""  class="col-lg-4 col-sm-6 <?php echo $catid; ?>" >
+          <!--Single Course Item Start-->
             <div class="single-course-item border-radius">
                 <div class="course-thumb-area">
                     <img class="img-fluid" src="images/courses/<?php echo $subject; ?>.jpg" alt="img">
@@ -152,11 +167,9 @@ include 'header.php';
         </div><!--/.col-lg-4-->
 
         <?php
-        $i = $i+1;
       }
+      ?>
 
-    }
-         ?>
       </div><!--/.row-->
         <div class="row">
             <div class="col-lg-12">
@@ -285,7 +298,31 @@ include 'header.php';
 
 
 
+<script type="text/javascript">
 
+
+function coursefilter(catid){
+
+// console.log(catid);
+  if (catid=="") {
+    document.getElementById("coursesfilter").innerHTML="";
+    return;
+  }
+  var xmlhttp=new XMLHttpRequest();
+xmlhttp.onreadystatechange=function() {
+  if (this.readyState==4 && this.status==200) {
+    document.getElementById("coursesfilter").innerHTML=this.responseText;
+  }
+
+}
+  xmlhttp.open("GET", "coursefilter.php?catid="+catid, true);
+  xmlhttp.send();
+
+
+}
+
+
+</script>
 
 <?php
 include 'footer.php';
